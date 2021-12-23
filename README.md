@@ -4,7 +4,9 @@ Este es un juego que imita al reconocido programa presentado en varios paises. E
 
 # Comentarios
 Para este programa se uso una base de datos local, el codigo para la creacion de la base de datos fue realizado en MySQL en PhpMyAdmin y esta escrito a continuacion. 
-CREATE TABLE `juego_preguntas`.`jugadores` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `nombre` VARCHAR(50) NOT NULL , `documento` VARCHAR(12) NOT NULL , `puntos` INT(10) NOT NULL , PRIMARY KEY (`id`)) ENGINE = MyISAM;  
+CREATE TABLE `juego_preguntas`.`jugadores` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `nombre` VARCHAR(50) NOT NULL , `documento` VARCHAR(12) NOT NULL , `puntos` INT(10) NOT NULL , PRIMARY KEY (`id`)) ENGINE = MyISAM; 
+Al ser una base de datos local, en el archivo Conectar_BDD.java en la linea 14, se debe configurar la ruta de la base de datos para que se haga el respectivo almacenado. 
+En el archivo Juego.java en la linea 18 se debe espeificar la ruta donde se desea guardar el archivo, con el respectivo nombre del archivo. 
 
 Este programa almacena la informacion de dos maneras en un txt y en una base de datos. 
 Hay un par de metodos comentados, los cuales se dejaron de esta manera, por que asi el usuario debia ingresar todas las preguntas y respuestas cada que se ejecutaba el juego. Por lo tanto se vuelve una tarea tediosa. 
